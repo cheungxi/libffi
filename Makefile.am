@@ -51,6 +51,7 @@ noinst_HEADERS = src/aarch64/ffitarget.h src/aarch64/internal.h		\
 	src/avr32/ffitarget.h src/bfin/ffitarget.h			\
 	src/cris/ffitarget.h src/csky/ffitarget.h src/frv/ffitarget.h	\
 	src/ia64/ffitarget.h src/ia64/ia64_flags.h			\
+	src/loongarch64/ffitarget.h                                     \
 	src/m32r/ffitarget.h src/m68k/ffitarget.h			\
 	src/m88k/ffitarget.h src/metag/ffitarget.h			\
 	src/microblaze/ffitarget.h src/mips/ffitarget.h			\
@@ -63,8 +64,7 @@ noinst_HEADERS = src/aarch64/ffitarget.h src/aarch64/internal.h		\
 	src/sparc/internal.h src/tile/ffitarget.h src/vax/ffitarget.h	\
 	src/x86/ffitarget.h src/x86/internal.h src/x86/internal64.h	\
 	src/x86/asmnames.h src/xtensa/ffitarget.h src/dlmalloc.c	\
-	src/kvx/ffitarget.h src/kvx/asm.h				\
-	src/loongarch64/ffitarget.h
+	src/kvx/ffitarget.h src/kvx/asm.h
 
 EXTRA_libffi_la_SOURCES = src/aarch64/ffi.c src/aarch64/sysv.S		\
 	src/aarch64/win64_armasm.S src/alpha/ffi.c src/alpha/osf.S	\
@@ -74,6 +74,7 @@ EXTRA_libffi_la_SOURCES = src/aarch64/ffi.c src/aarch64/sysv.S		\
 	src/bfin/sysv.S src/cris/ffi.c src/cris/sysv.S src/frv/ffi.c	\
 	src/csky/ffi.c src/csky/sysv.S src/frv/eabi.S src/ia64/ffi.c	\
 	src/ia64/unix.S src/m32r/ffi.c src/m32r/sysv.S src/m68k/ffi.c	\
+	src/loongarch64/ffi.c src/loongarch64/sysv.S                    \
 	src/m68k/sysv.S src/m88k/ffi.c src/m88k/obsd.S			\
 	src/metag/ffi.c src/metag/sysv.S src/microblaze/ffi.c		\
 	src/microblaze/sysv.S src/mips/ffi.c src/mips/o32.S		\
@@ -94,7 +95,7 @@ EXTRA_libffi_la_SOURCES = src/aarch64/ffi.c src/aarch64/sysv.S		\
 	src/x86/ffiw64.c src/x86/win64.S src/x86/ffi64.c		\
 	src/x86/unix64.S src/x86/sysv_intel.S src/x86/win64_intel.S	\
 	src/xtensa/ffi.c src/xtensa/sysv.S src/kvx/ffi.c		\
-	src/kvx/sysv.S src/loongarch64/ffi.c src/loongarch64/sysv.S
+	src/kvx/sysv.S
 
 TARGET_OBJ = @TARGET_OBJ@
 libffi_la_LIBADD = $(TARGET_OBJ)
